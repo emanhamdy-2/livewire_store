@@ -26,6 +26,13 @@ Route::get('/cart', CartComponent::class);
 Route::get('/shop', ShopComponent::class);
 Route::get('/checkout', CheckoutComponent::class);
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+//admin
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+  Route::get('/user/dashboard',UserDashboardComponent::class)
+});
+
+//user
+Route::middleware(['auth:sanctum', 'verified','authadmin'])->group(function () {
+  Route::get('/admin/dashboard',AdminDashboardComponent::class)
+});
+

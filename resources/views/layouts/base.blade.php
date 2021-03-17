@@ -15,6 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/chosen.min.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/color-01.css') }}">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   @livewireStyles
 </head>
 <body class="home-page home-01 ">
